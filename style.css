@@ -51,11 +51,11 @@ p{
     display: none;
 }
 
+/*Regular Styling*/
 
 body{
     font-family: 'Biryani', sans-serif;
 }
-
 
 aside{
     height: 35vh;
@@ -85,7 +85,7 @@ form{
     gap: 0.2rem;
 }
 
-.expCvc{
+.expCvc, .monthYear{
     display: grid;
     grid-auto-flow: column;
     gap: 0.5rem;
@@ -94,12 +94,6 @@ form{
 .expDate, .cvc{
     display: grid;
     gap: 0.2rem;
-}
-
-.monthYear{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.5rem;
 }
 
 .monthYear>*{
