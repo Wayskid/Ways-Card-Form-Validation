@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WaysAnn Card Form</title>
+</head>
+<body>
+    <div class="containerBody">
+        <aside>
+            <div class="cardSize cardFront">
+                <div class="cardFrontTop">
+                    <div class="whiteCircle"></div>
+                    <div class="whiteBorder"></div>
+                </div>
+                <div class="cardFrontBottom">
+                    <div class="pseudoNum">
+                        <div>0000</div>
+                        <div>0000</div>
+                        <div>0000</div>
+                        <div>0000</div>
+                    </div>
+                    <div class="pseudoNameDate">
+                        <div class="pseudoName">JANE APPLESEED</div>
+                        <div class="pseudoDate">00/00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cardSize cardBack">
+                <div class="backTop"></div>
+                <div class="backMid">000</div>
+                <div class="backBottom">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam autem minus architecto velit ea.</div>
+            </div>
+        </aside>
+        <section>
+            <form>
+                <div class="inputDiv">
+                    <label class="cardNameLabel">CARDHOLDER NAME</label>
+                    <input type= "text" class="cardNameInput" placeholder="e.g. Jane Appleseed">
+                    <p class="errName">Can't be empty</p>
+                </div>
+                <div class="inputDiv">
+                    <label class="cardNumLabel">CARD NUMBER</label>
+                    <input type = "text" class="cardNumInput" placeholder="e.g. 1234 5678 9123 0000">
+                    <p class="errNum">Wrong format, numbers only</p>
+                </div>
+                <div class="expCvc">
+                    <div class="expDate">
+                        <label class="expDateLabel">EXP. DATE (MM/YY)</label>
+                        <div class="monthYear">
+                            <input type = "number" class="MexpDateInput" placeholder="MM">
+                            <input type = "number" class="YexpDateInput" placeholder="YY">
+                        </div>
+                        <p class="errExpDate">Can't be empty</p>
+                    </div>
+                    <div class="cvc">
+                        <label class="cvcLabel">CVC</label>
+                        <input type = "number" class="cvcInput" placeholder="e.g. 123">
+                        <p class="errCvc">Can't be empty</p>
+                    </div>
+                </div>
+                <button type="submit" class="confirmBtn">Confirm</button>
+            </form>
+        </section>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
