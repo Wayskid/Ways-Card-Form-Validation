@@ -23,7 +23,7 @@
                     </div>
                     <div class="pseudoNameDate">
                         <div class="pseudoName">JANE APPLESEED</div>
-                        <div class="pseudoDate">00/00</div>
+                        <div class="pseudoDate"><span class="mm">00</span>/<span class="yy">00</span></div>
                     </div>
                 </div>
             </div>
@@ -39,30 +39,37 @@
                 <div class="inputDiv">
                     <label class="cardNameLabel">CARDHOLDER NAME</label>
                     <input type= "text" class="cardNameInput" placeholder="e.g. Jane Appleseed">
-                    <p class="errName">Can't be empty</p>
+                    <p class="errName errMsg">Can't be empty</p>
                 </div>
                 <div class="inputDiv">
                     <label class="cardNumLabel">CARD NUMBER</label>
-                    <input type = "text" class="cardNumInput" placeholder="e.g. 1234 5678 9123 0000">
-                    <p class="errNum">Wrong format, numbers only</p>
+                    <input type = "text" class="cardNumInput" placeholder="e.g. 1234 5678 9123 0000" minlength="19" maxlength="19">
+                    <p class="errNum errMsg">Wrong format, numbers only</p>
                 </div>
                 <div class="expCvc">
                     <div class="expDate">
                         <label class="expDateLabel">EXP. DATE (MM/YY)</label>
                         <div class="monthYear">
-                            <input type = "number" class="MexpDateInput" placeholder="MM">
-                            <input type = "number" class="YexpDateInput" placeholder="YY">
+                            <input type = "number" class="MexpDateInput" placeholder="MM" min="1" max="12">
+                            <input type = "number" class="YexpDateInput" placeholder="YY" min="1" max="99">
                         </div>
-                        <p class="errExpDate">Can't be empty</p>
+                        <p class="errExpDate errMsg">Can't be empty</p>
                     </div>
                     <div class="cvc">
                         <label class="cvcLabel">CVC</label>
-                        <input type = "number" class="cvcInput" placeholder="e.g. 123">
-                        <p class="errCvc">Can't be empty</p>
+                        <input type = "number" class="cvcInput" placeholder="e.g. 123" min="100" max="999">
+                        <p class="errCvc errMsg">Can't be empty</p>
                     </div>
                 </div>
                 <button type="submit" class="confirmBtn">Confirm</button>
             </form>
+
+            <div class="thanksPopup">
+                <div class="check"></div>
+                <h1>THANK YOU!</h1>
+                <h5>We've added your card details.</h5>
+                <button class="confirmBtn">Continue</button>
+            </div>
         </section>
     </div>
 
