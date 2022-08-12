@@ -16,15 +16,21 @@ thanksPopupBtn = document.querySelector(".thanksPopup>button");
 
 
 
+
+
 formSubmit.addEventListener("submit", (e)=>{
     e.preventDefault();
-
+    let trimmedCardName = cardNameInput.value.trim(),
+    trimmedCardNum = cardNumInput.value.trim(),
+    trimmedCardMM = MexpDateInput.value.trim(),
+    trimmedCardYY = YexpDateInput.value.trim(),
+    trimmedCardCVC = cvcInput.value.trim();
     if (
-        cardNameInput.value.length < 2 ||
-        cardNumInput.value.length < 19 ||
-        MexpDateInput.value.length < 2 ||
-        YexpDateInput.value.length < 2 ||
-        cvcInput.value.length < 3
+        trimmedCardName.length < 2 ||
+        trimmedCardNum.length < 19 ||
+        trimmedCardMM.length < 2 ||
+        trimmedCardYY.length < 2 ||
+        trimmedCardCVC.length < 3
     ) {
         showErrEmpty(cardNameInput, MexpDateInput);
         showErrEmpty(cvcInput, MexpDateInput);
@@ -61,15 +67,16 @@ formSubmit.addEventListener("submit", (e)=>{
 
 // ErrMesages for Input fields
 function showErrEmpty(input1, input2) {
-
-    if (input1.value.length === 0) {
+    let trimmedInput1 = input1.value.trim(),
+    trimmedInput2 = input2.value.trim();
+    if (trimmedInput1.length === 0) {
         input1.nextElementSibling.style.display = "unset";
     }else {
         input1.nextElementSibling.style.display = "none";
     }
 
 
-    if (input2.value.length === 0 || input2.nextElementSibling.value.length === 0) {
+    if (trimmedInput2.length === 0 || input2.nextElementSibling.value.length === 0) {
         input2.parentElement.nextElementSibling.style.display = "unset";
     }else {
         input2.parentElement.nextElementSibling.style.display = "none";

@@ -218,12 +218,7 @@ form{
 }
 
 .cvc, .expDate{
-    position: relative;
-}
-
-.errCvc, .errExpDate{
-    position: absolute;
-    top: 105%;
+    height: fit-content;
 }
 
 .thanksPopup{
